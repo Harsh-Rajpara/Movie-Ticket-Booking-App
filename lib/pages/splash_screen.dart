@@ -35,11 +35,16 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       backgroundColor: MyTheme.splash,
       body: Container(
         child: Center(
-          child: ScaleTransition(
+          child: Text(
+            'Book Now Show',
+            style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),
+          ),
+            child: ScaleTransition(
             scale: _animation,
             child: SvgPicture.asset(
               "assets/icons/splash_icon.svg",
               height: 100,
+
             ),
           ),
         ),
