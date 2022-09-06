@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -33,20 +34,27 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return Scaffold(
       backgroundColor: MyTheme.splash,
-      body: Container(
-        child: Center(
-          child: Text(
-            'Book Now Show',
-            style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold),
-          ),
-            child: ScaleTransition(
-            scale: _animation,
-            child: SvgPicture.asset(
-              "assets/icons/splash_icon.svg",
-              height: 100,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: ScaleTransition(
+                  scale: _animation,
+                  child: SvgPicture.asset(
+                    "assets/icons/splash_icon.svg",
+                    height: 100,
+                  ),
+                ),
+              ),
+              Container(
+                child: Text(
+                  'BookNowShow',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
 
-            ),
-          ),
         ),
       ),
     );
