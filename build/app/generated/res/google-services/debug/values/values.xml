@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">653281458725-6ditum6barsd3d5t2vfkf1l84uvk9fkn.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">653281458725</string>
+    <string name="google_api_key" translatable="false">AIzaSyB0MGQUufpt9bWUXHFGmA5suetYT9fxvMM</string>
+    <string name="google_app_id" translatable="false">1:653281458725:android:8353d45d08ce567610ddcc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB0MGQUufpt9bWUXHFGmA5suetYT9fxvMM</string>
+    <string name="google_storage_bucket" translatable="false">movieticketapp-4377f.appspot.com</string>
+    <string name="project_id" translatable="false">movieticketapp-4377f</string>
+</resources>
