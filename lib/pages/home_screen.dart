@@ -40,17 +40,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    SharedPref.getLocation().then((value) => LocationController.instance.setCity(value));
+    SharedPref.getLocation()
+        .then((value) => LocationController.instance.setCity(value));
     super.initState();
   }
 
-  static const CameraPosition _kLake =
-  CameraPosition(bearing: 192.8334901395799, target: LatLng(37.43296265331129, -122.08832357078792), tilt: 59.440717697143555, zoom: 19.151926040649414);
+  static const CameraPosition _kLake = CameraPosition(
+      bearing: 192.8334901395799,
+      target: LatLng(37.43296265331129, -122.08832357078792),
+      tilt: 59.440717697143555,
+      zoom: 19.151926040649414);
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: MyTheme.statusBar));
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: MyTheme.statusBar));
     String? picUrl = AuthController.instance.user!.photoURL;
     picUrl = picUrl ?? Constants.dummyAvatar;
     return SafeArea(
@@ -79,9 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.only(left: 5.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Name")
-                ],
+                children: [Text("Name")],
               ),
               // child: Column(
               //   crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,7 +150,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.only(left: 20.0, top: 20),
                   child: Text(
                     "SEAT CATEGORIES",
-                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.8)),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.8)),
                   ),
                 ),
                 const MyMenuItem(),
@@ -155,7 +160,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.only(left: 20.0, top: 10),
                   child: Text(
                     "MOVIES",
-                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.8)),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.8)),
                   ),
                 ),
                 const MoviesItems(),
@@ -196,7 +203,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 //   ),
                 // ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20.0, top: 10, right: 20),
+                  padding:
+                      const EdgeInsets.only(left: 20.0, top: 10, right: 20),
                   child: Row(
                     children: [
                       SvgPicture.asset(
@@ -210,7 +218,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Text(
                         "Events".toUpperCase(),
-                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.8)),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black.withOpacity(0.8)),
                       ),
                       const Spacer(),
                       TextButton(
@@ -227,7 +237,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   events: events,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20.0, top: 10, right: 20),
+                  padding:
+                      const EdgeInsets.only(left: 20.0, top: 10, right: 20),
                   child: Row(
                     children: [
                       SvgPicture.asset(
@@ -241,7 +252,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Text(
                         "Plays".toUpperCase(),
-                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.8)),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black.withOpacity(0.8)),
                       ),
                       const Spacer(),
                       TextButton(
@@ -254,9 +267,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                // EventItems(
-                //   events: plays,
-                // ),
+                EventItems(
+                  events: plays,
+                ),
               ],
             ),
           ),
