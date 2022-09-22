@@ -254,9 +254,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                EventItems(
-                  events: plays,
-                ),
+                // EventItems(
+                //   events: plays,
+                // ),
               ],
             ),
           ),
