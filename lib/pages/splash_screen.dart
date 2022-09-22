@@ -1,8 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:booknowshow/utils/mytheme.dart';
+
+import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,6 +24,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     _animationController = AnimationController(vsync: this, duration: const Duration(milliseconds: 3000));
     _animation = CurvedAnimation(parent: _animationController, curve: Curves.bounceOut, reverseCurve: Curves.bounceIn);
     _animationController.forward();
+
+    // Timer(const Duration(milliseconds: 2500),
+    //     ()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => LoginScreen()))
+    // );
     super.initState();
   }
 

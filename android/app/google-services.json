@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "653281458725",
+    "project_id": "movieticketapp-4377f",
+    "storage_bucket": "movieticketapp-4377f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653281458725:android:8353d45d08ce567610ddcc",
+        "android_client_info": {
+          "package_name": "com.example.booknowshow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "653281458725-6ditum6barsd3d5t2vfkf1l84uvk9fkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0MGQUufpt9bWUXHFGmA5suetYT9fxvMM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "653281458725-6ditum6barsd3d5t2vfkf1l84uvk9fkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
