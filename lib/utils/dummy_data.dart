@@ -51,58 +51,58 @@ List<OfferModel> offers = [
 
 List<MovieModel> movies = [
   MovieModel(
-    title: "saaho",
+    title: "Brahmastar",
     description: "description",
     actors: ["actor a", "actor b"],
     like: 84,
-    bannerUrl: "assets/movies/saaho.png",
+    bannerUrl: "assets/movies/Brahmastar.jpg",
   ),
   MovieModel(
-    title: "gabbar",
+    title: "Vikram-Veda",
     description: "description",
     actors: ["actor a", "actor b"],
     like: 84,
-    bannerUrl: "assets/movies/gabbar.png",
+    bannerUrl: "assets/movies/Vikram-Veda.jpg",
   ),
   MovieModel(
-    title: "pizza",
+    title: "Fakt-Mahilao-Maate",
     description: "description",
     actors: ["actor a", "actor b"],
     like: 84,
-    bannerUrl: "assets/movies/pizza.png",
+    bannerUrl: "assets/movies/Fakt-Mahilao-Maate.jpg",
   ),
   MovieModel(
-    title: "Sarkar",
+    title: "Top-Gun--Maverick",
     description: "description",
     actors: ["actor a", "actor b"],
     like: 84,
-    bannerUrl: "assets/movies/movie4.png",
+    bannerUrl: "assets/movies/Top-Gun--Maverick.webp",
   ),
 ];
 
 List<EventModel> events = [
   EventModel(
-    title: "Happy Halloween 2K22",
+    title: "KING - India Tour Ahmedabad",
     description: "Music show",
     date: "date",
-    bannerUrl: "assets/events/event1.png",
+    bannerUrl: "assets/events/King.png",
   ),
   EventModel(
-    title: "Music DJ king...",
+    title: "The Kirtidan Gadhvi Dandiya Dhamal",
     description: "Music show",
     date: "date",
-    bannerUrl: "assets/events/event2.png",
+    bannerUrl: "assets/events/kirtidan.png",
   ),
   EventModel(
-    title: "Summer sounds festiva..",
+    title: "Shankus Dandiya 2022, Adani Shantigram",
     description: "Comedy show",
     date: "date",
-    bannerUrl: "assets/events/event3.png",
+    bannerUrl: "assets/events/shankus.png",
   ),
   EventModel(
-    title: "Happy Halloween 2K22",
+    title: "Sunburn Arena ft. DJ SNAKE - Ahmedabad",
     description: "Music show",
-    bannerUrl: "assets/events/event4.png",
+    bannerUrl: "assets/events/Snake.png",
     date: "date",
   ),
 ];
