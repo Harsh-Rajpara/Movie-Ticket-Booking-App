@@ -13,7 +13,7 @@ class CustomSlider extends StatelessWidget {
       width: size.width,
       child: Image.asset(
         sliderData[index].url,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
       ),
     );
   }

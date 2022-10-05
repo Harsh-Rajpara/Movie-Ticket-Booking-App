@@ -6,22 +6,20 @@ import 'package:booknowshow/utils/mytheme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   Get.put(AuthController());
   runApp(Myapp());
-
 }
-  class Myapp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return GetMaterialApp(
-        theme: MyTheme.myLightTheme,
-        debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
-      );
-    }
+
+class Myapp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      theme: MyTheme.myLightTheme,
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
+    );
   }
-  
+}

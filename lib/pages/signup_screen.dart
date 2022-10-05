@@ -7,7 +7,6 @@ import 'package:get/get.dart';
 // import 'package:movieticketbookingapp/controllers/auth_controller.dart';
 // import 'package:movieticketbookingapp/controllers/input_validators.dart';
 
-
 import '../controllers/input_validators.dart';
 import '../utils/mytheme.dart';
 import '../utils/social_buttons.dart';
@@ -28,7 +27,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return Scaffold(
       backgroundColor: MyTheme.splash,
       resizeToAvoidBottomInset: false,
@@ -39,12 +39,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset("assets/icons/splash_icon.svg"),
+              // SvgPicture.asset(
+              //   "assets/icons/sign-in-up.svg",
+              //   height: 50,
+              //   width: 50,
+              // ),
               const SizedBox(
                 height: 20,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 padding: const EdgeInsets.all(19),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -135,11 +140,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        if (InputValidator.validateField("Name", nameController.text.trim()) &&
-                            InputValidator.validateField("Email", emailController.text.trim())) {
-                          if (InputValidator.validatePassword(passwordController.text, cnfPassController.text)) {
-                            AuthController.instance
-                                .registerUser(emailController.text.trim(), passwordController.text.trim());
+                        if (InputValidator.validateField(
+                                "Name", nameController.text.trim()) &&
+                            InputValidator.validateField(
+                                "Email", emailController.text.trim())) {
+                          if (InputValidator.validatePassword(
+                              passwordController.text,
+                              cnfPassController.text)) {
+                            AuthController.instance.registerUser(
+                                emailController.text.trim(),
+                                passwordController.text.trim());
                           }
                         }
                       },
@@ -187,8 +197,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 15, bottom: 15),
-                      child: SocialLoginButtons(onFbClick: () {}, onGoogleClick: () {}),
-
+                      child: SocialLoginButtons(
+                          onFbClick: () {}, onGoogleClick: () {}),
                     ),
                   ],
                 ),
@@ -202,11 +212,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     TextSpan(
                       text: "Login",
-                      style: const TextStyle(decoration: TextDecoration.underline, fontWeight: FontWeight.w700),
+                      style: const TextStyle(
+                          decoration: TextDecoration.underline,
+                          fontWeight: FontWeight.w700),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                        // Navigator.pop(context);
-                           Get.back();
+                          // Navigator.pop(context);
+                          Get.back();
                         },
                     ),
                     const TextSpan(

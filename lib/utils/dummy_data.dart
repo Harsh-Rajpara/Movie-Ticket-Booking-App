@@ -13,9 +13,9 @@ import '../model/event_model.dart';
 import '../utils/constants.dart';
 
 List<AdSliderModel> sliderData = [
-  AdSliderModel(url: "assets/slider_banner.png", redirectUrl: Constants.baseApiUrl),
-  AdSliderModel(url: "assets/slider_banner.png", redirectUrl: Constants.baseApiUrl),
-  AdSliderModel(url: "assets/slider_banner.png", redirectUrl: Constants.baseApiUrl),
+  AdSliderModel(url: "assets/sunbur.png", redirectUrl: Constants.baseApiUrl),
+  AdSliderModel(url: "assets/inox.png", redirectUrl: Constants.baseApiUrl),
+  AdSliderModel(url: "assets/godfather.png", redirectUrl: Constants.baseApiUrl),
 ];
 
 List<MenuModel> menus = [
@@ -109,27 +109,27 @@ List<EventModel> events = [
 
 List<EventModel> plays = [
   EventModel(
-    title: "Alex in wonderland",
+    title: "GAON,SHAHAR AUR MAIN - POETRY & STORYTELLING",
     description: "Comedy Show",
     date: "date",
-    bannerUrl: "assets/plays/play1.png",
+    bannerUrl: "assets/plays/gaon.png",
   ),
   EventModel(
-    title: "Marry poppins puffet show",
+    title: "Tughlaq",
     description: "Music Show",
     date: "date",
-    bannerUrl: "assets/plays/play2.png",
+    bannerUrl: "assets/plays/tughlaq_1.png",
   ),
   EventModel(
-    title: "Patrimandram special dewali",
+    title: "Jaane woh kaise log the",
     description: "Dibet Show",
     date: "date",
-    bannerUrl: "assets/plays/play3.png",
+    bannerUrl: "assets/plays/jaane-woh.png",
   ),
   EventModel(
-    title: "Happy Halloween 2K19",
+    title: "The Conference of the birds",
     description: "Music Show",
-    bannerUrl: "assets/plays/play4.png",
+    bannerUrl: "assets/plays/the-conference_1.png",
     date: "date",
   ),
 ];

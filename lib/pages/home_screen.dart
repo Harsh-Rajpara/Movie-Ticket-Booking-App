@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:booknowshow/pages/profile_screen.dart';
 import 'package:booknowshow/pages/select_location_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -133,19 +134,89 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: size.height * 0.2,
-                  width: size.width,
-                  color: Colors.red,
-                  child: PageView.builder(
-                    itemCount: 3,
-                    itemBuilder: (_, i) {
-                      return CustomSlider(
-                        index: i,
-                      );
-                    },
-                  ),
+                SizedBox(
+                  height: 5,
                 ),
+                CarouselSlider(
+                    items: [
+                      Container(
+                        //height: 200,
+                        width: double.infinity,
+                        margin: EdgeInsets.only(
+                            top: 10, bottom: 12, left: 5, right: 5),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/sunbur.png'),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 10.0,
+                                blurStyle: BlurStyle.outer),
+                          ],
+                          color: Colors.white,
+                        ),
+                      ),
+                      Container(
+                        //height: 200,
+                        width: double.infinity,
+                        margin: EdgeInsets.only(
+                            top: 10, bottom: 12, left: 5, right: 5),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/inox.png'),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 10.0,
+                                blurStyle: BlurStyle.outer),
+                          ],
+                          color: Colors.white,
+                        ),
+                      ),
+                      Container(
+                        //height: 200,
+                        width: double.infinity,
+                        margin: EdgeInsets.only(
+                            top: 10, bottom: 12, left: 5, right: 5),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/godfather.png'),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.black26,
+                                blurRadius: 10.0,
+                                blurStyle: BlurStyle.outer),
+                          ],
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                    options: CarouselOptions(
+                        height: size.height * 0.26,
+                        autoPlay: true,
+                        enlargeCenterPage: false,
+                        autoPlayCurve: Curves.easeInOut,
+                        viewportFraction: 0.82)),
+
+                // Container(
+                //   height: size.height * 0.2,
+                //   width: size.width,
+                //   color: Colors.red,
+                //   child: PageView.builder(
+                //     itemCount: 3,
+                //     itemBuilder: (_, i) {
+                //       return CustomSlider(
+                //         index: i,
+                //       );
+                //     },
+                //   ),
+                // ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0, top: 20),
                   child: Text(
