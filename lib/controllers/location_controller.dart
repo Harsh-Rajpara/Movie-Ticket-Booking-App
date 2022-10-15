@@ -12,7 +12,7 @@ class LocationController extends GetxController {
 
   @override
   void onInit() async {
-     city = (await SharedPref.getLocation()).obs;
+    city = (await SharedPref.getLocation()).obs;
     super.onInit();
   }
 
@@ -54,7 +54,7 @@ class LocationController extends GetxController {
 
   setCity(String myCity) async {
     city = myCity.obs;
-    // await SharedPref.storeLocation(myCity);
+    //await SharedPref.storeLocation(myCity);
     update();
   }
 

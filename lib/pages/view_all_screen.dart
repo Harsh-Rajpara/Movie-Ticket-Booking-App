@@ -49,23 +49,46 @@ class _ViewAllScreenState extends State<ViewAllScreen> {
         appBar: AppBar(
           title: Text(menu.name),
           leading: IconButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.pop(context);
               },
               icon: Icon(Icons.arrow_back)),
           actions: [
             IconButton(
-              onPressed: (){
-                showSearch(context: context, delegate: MySearchDelegate(isMovie:(menu.name.toLowerCase().contains("movies")) ? true : false, list: [] ),
+              onPressed: () {
+                showSearch(
+                  context: context,
+                  delegate: MySearchDelegate(
+                      isMovie: (menu.name.toLowerCase().contains("movies"))
+                          ? true
+                          : false,
+                      list: []),
                 );
               },
               icon: SvgPicture.asset("assets/icons/search.svg"),
             ),
-
           ],
         ),
-        body: Container(
-        )
+        body: Container(child: LayoutBuilder(builder: (context, constraint) {
+          return GridView.builder(
+            shrinkWrap: true,
+            physics: const BouncingScrollPhysics(),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: constraint.maxWidth > 480 ? 4 : 2,
+              childAspectRatio: 0.8,
+            ),
+            itemBuilder: (_, index) {
+              return ItemBlock(
+                model: list[index],
+                height: 180,
+                width: 150,
+                onTap: (model) {},
+              );
+              // return resultWidget(suggestionList[index]);
+            },
+            itemCount: list.length,
+          );
+        })),
         // Column(
         //   crossAxisAlignment: CrossAxisAlignment.center,
         //   children: [
@@ -175,8 +198,11 @@ class MySearchDelegate extends SearchDelegate<String> {
   Widget buildSuggestions(BuildContext context) {
     List<dynamic> list = isMovie ? movies : events;
     final suggestionList = query.isEmpty
-        ? list : list.where((element) => element.title.toLowerCase().contains(query.toLowerCase()))
-        .toList();
+        ? list
+        : list
+            .where((element) =>
+                element.title.toLowerCase().contains(query.toLowerCase()))
+            .toList();
     // return ListView.builder(itemBuilder: (_,index) {
     //   return Text(suggestionList[index].title);
     //
@@ -190,7 +216,9 @@ class MySearchDelegate extends SearchDelegate<String> {
           childAspectRatio: 0.8,
         ),
         itemBuilder: (_, index) {
-           return resultWidget(isMovie ? movies[index] : events[index],);
+          return resultWidget(
+            isMovie ? movies[index] : events[index],
+          );
           // return resultWidget(suggestionList[index]);
         },
         itemCount: suggestionList.length,

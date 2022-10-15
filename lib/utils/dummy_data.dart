@@ -52,28 +52,28 @@ List<OfferModel> offers = [
 List<MovieModel> movies = [
   MovieModel(
     title: "Brahmastar",
-    description: "description",
+    description: "Action/Adventure/Fantasy",
     actors: ["actor a", "actor b"],
     like: 84,
     bannerUrl: "assets/movies/Brahmastar.jpg",
   ),
   MovieModel(
     title: "Vikram-Veda",
-    description: "description",
+    description: "Action/Crime/Thriller",
     actors: ["actor a", "actor b"],
     like: 84,
     bannerUrl: "assets/movies/Vikram-Veda.jpg",
   ),
   MovieModel(
     title: "Fakt-Mahilao-Maate",
-    description: "description",
+    description: "Comedy/Drama",
     actors: ["actor a", "actor b"],
     like: 84,
     bannerUrl: "assets/movies/Fakt-Mahilao-Maate.jpg",
   ),
   MovieModel(
     title: "Top-Gun--Maverick",
-    description: "description",
+    description: "Action/Drama",
     actors: ["actor a", "actor b"],
     like: 84,
     bannerUrl: "assets/movies/Top-Gun--Maverick.webp",
@@ -95,7 +95,7 @@ List<EventModel> events = [
   ),
   EventModel(
     title: "Shankus Dandiya 2022, Adani Shantigram",
-    description: "Comedy show",
+    description: "Music show",
     date: "date",
     bannerUrl: "assets/events/shankus.png",
   ),
@@ -110,25 +110,25 @@ List<EventModel> events = [
 List<EventModel> plays = [
   EventModel(
     title: "GAON,SHAHAR AUR MAIN - POETRY & STORYTELLING",
-    description: "Comedy Show",
+    description: "Storytelling",
     date: "date",
     bannerUrl: "assets/plays/gaon.png",
   ),
   EventModel(
     title: "Tughlaq",
-    description: "Music Show",
+    description: "Theatre",
     date: "date",
     bannerUrl: "assets/plays/tughlaq_1.png",
   ),
   EventModel(
     title: "Jaane woh kaise log the",
-    description: "Dibet Show",
+    description: "Storytelling",
     date: "date",
     bannerUrl: "assets/plays/jaane-woh.png",
   ),
   EventModel(
     title: "The Conference of the birds",
-    description: "Music Show",
+    description: "Storytelling",
     bannerUrl: "assets/plays/the-conference_1.png",
     date: "date",
   ),
