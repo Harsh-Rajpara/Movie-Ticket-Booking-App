@@ -220,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0, top: 20),
                   child: Text(
-                    "SEAT CATEGORIES",
+                    "CATEGORIES",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black.withOpacity(0.8)),
