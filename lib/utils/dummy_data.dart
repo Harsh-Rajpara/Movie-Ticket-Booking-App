@@ -1,6 +1,7 @@
 // import 'package:movieticketbookingapp/model/seat_layout_model.dart';
 
 // import '../model/crew_cast_model.dart';
+import '../model/crew_cast_model.dart';
 import '../model/menu_model.dart';
 import '../model/movie_model.dart';
 import '../model/offer_model.dart';
@@ -142,32 +143,32 @@ List<String> cities = [
   "Lucknow",
 ];
 //
-// List<CrewCastModel> crewCast = [
-//   CrewCastModel(
-//     movieId: "123",
-//     castId: "123",
-//     name: "Chadwick",
-//     image: "assets/actors/chadwick.png",
-//   ),
-//   CrewCastModel(
-//     movieId: "123",
-//     castId: "123",
-//     name: "Letitia Wright",
-//     image: "assets/actors/LetitiaWright.png",
-//   ),
-//   CrewCastModel(
-//     movieId: "123",
-//     castId: "123",
-//     name: "B. Jordan",
-//     image: "assets/actors/b_jordan.png",
-//   ),
-//   CrewCastModel(
-//     movieId: "123",
-//     castId: "123",
-//     name: "Lupita Nyong",
-//     image: "assets/actors/lupita_nyong.png",
-//   ),
-// ];
+List<CrewCastModel> crewCast = [
+  CrewCastModel(
+    movieId: "123",
+    castId: "123",
+    name: "Chadwick",
+    image: "assets/actors/chadwick.png",
+  ),
+  CrewCastModel(
+    movieId: "123",
+    castId: "123",
+    name: "Letitia Wright",
+    image: "assets/actors/LetitiaWright.png",
+  ),
+  CrewCastModel(
+    movieId: "123",
+    castId: "123",
+    name: "B. Jordan",
+    image: "assets/actors/b_jordan.png",
+  ),
+  CrewCastModel(
+    movieId: "123",
+    castId: "123",
+    name: "Lupita Nyong",
+    image: "assets/actors/lupita_nyong.png",
+  ),
+];
 //
 // List<TheatreModel> theatres = [
 //   TheatreModel(id: "1", name: "Arasan Cinemas A/C 2K Dolby"),

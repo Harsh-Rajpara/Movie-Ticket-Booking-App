@@ -1,7 +1,11 @@
+import 'package:booknowshow/widgets/cast_crew_block.dart';
+import 'package:booknowshow/widgets/offers_block.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
+import '../utils/mytheme.dart';
+import '../utils/mytheme.dart';
 import '../utils/mytheme.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -155,6 +159,39 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomAppBar(
+        child: ElevatedButton(
+          onPressed: () {},
+          child: Container(
+            width: double.maxFinite,
+            height: 57,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(
+                  "assets/icons/armchair.svg",
+                  color: Colors.white,
+                  height: 20,
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                const Text(
+                  "Book Seats",
+                  style: TextStyle(fontSize: 18),
+                ),
+              ],
+            ),
+          ),
+          style: ElevatedButton.styleFrom(
+            primary: MyTheme.splash,
+            elevation: 0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0),
+            ),
+          ),
+        ),
+      ),
       body: CustomScrollView(
         physics: BouncingScrollPhysics(),
         slivers: [
@@ -165,6 +202,7 @@ class DetailsScreen extends StatelessWidget {
                   Get.back();
                 },
                 icon: Icon(Icons.arrow_back)),
+            title: Text(model.title),
             pinned: true,
             expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
@@ -184,9 +222,22 @@ class DetailsScreen extends StatelessWidget {
             hasScrollBody: false,
             child: Container(
               color: Color(0xFFF5F5FA),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [block1(model)],
+              child: SingleChildScrollView(
+                physics: NeverScrollableScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    block1(model),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    OffersBlock(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    CrewCastBlock(),
+                  ],
+                ),
               ),
             ),
           )
