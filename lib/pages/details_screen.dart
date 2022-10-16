@@ -1,3 +1,4 @@
+import 'package:booknowshow/pages/list_cinema_screen.dart';
 import 'package:booknowshow/widgets/cast_crew_block.dart';
 import 'package:booknowshow/widgets/offers_block.dart';
 import 'package:flutter/material.dart';
@@ -161,7 +162,12 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: BottomAppBar(
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(()=>  ListCinemaScreen(
+              model: model,
+            ),
+            );
+          },
           child: Container(
             width: double.maxFinite,
             height: 57,

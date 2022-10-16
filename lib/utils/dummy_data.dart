@@ -6,6 +6,7 @@ import '../model/menu_model.dart';
 import '../model/movie_model.dart';
 import '../model/offer_model.dart';
 // import '../model/theatre_model.dart';
+import '../model/theatre_model.dart';
 import '../utils/mytheme.dart';
 
 import '../model/ad_slider_model.dart';
@@ -169,14 +170,14 @@ List<CrewCastModel> crewCast = [
     image: "assets/actors/lupita_nyong.png",
   ),
 ];
-//
-// List<TheatreModel> theatres = [
-//   TheatreModel(id: "1", name: "Arasan Cinemas A/C 2K Dolby"),
-//   TheatreModel(id: "2", name: "INOX - Prozone mall"),
-//   TheatreModel(id: "3", name: "Karpagam theatres - 4K Dolby Atoms"),
-//   TheatreModel(id: "4", name: "KG theatres - 4K"),
-// ];
-//
+
+   List<TheatreModel> theatres = [
+  TheatreModel(id: "123", name: "Arasan Cinemas A/C 2K Dolby"),
+  TheatreModel(id: "123", name: "INOX - Prozone mall"),
+  TheatreModel(id: "123", name: "Karpagam theatres - 4K Dolby Atoms"),
+  TheatreModel(id: "123", name: "KG theatres - 4K"),
+];
+
 // List<String> facilityAsset = [
 //   "assets/icons/cancel.svg",
 //   "assets/icons/parking.svg",
@@ -188,7 +189,7 @@ List<CrewCastModel> crewCast = [
 //   "3D",
 //   "2D",
 // ];
-//
+
 // final seatLayout = SeatLayoutModel(
 //     rows: 10,
 //     cols: 11,
