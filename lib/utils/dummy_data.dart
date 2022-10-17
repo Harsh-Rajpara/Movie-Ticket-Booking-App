@@ -148,34 +148,63 @@ List<CrewCastModel> crewCast = [
   CrewCastModel(
     movieId: "123",
     castId: "123",
-    name: "Chadwick",
-    image: "assets/actors/chadwick.png",
+    name: "Ranbir Kapoor",
+    image: "https://assetscdn1.paytm.com/images/cinema/Crew/Ranbir-Kapoor.jpg",
   ),
   CrewCastModel(
     movieId: "123",
     castId: "123",
-    name: "Letitia Wright",
-    image: "assets/actors/LetitiaWright.png",
+    name: "Alia Bhatt",
+    // image: "assets/actors/LetitiaWright.png",
+    image:
+        "https://assetscdn1.paytm.com/images/cinema/MovieIcons/Cast/Alia-Bhatt.jpg",
   ),
   CrewCastModel(
     movieId: "123",
     castId: "123",
-    name: "B. Jordan",
-    image: "assets/actors/b_jordan.png",
+    name: "Amitabh\nbachchan",
+    // image: "assets/actors/b_jordan.png",
+    image:
+        "https://assetscdn1.paytm.com/images/cinema/Stills/PAD-MAN/cast/Amitabh-Bachchan.jpg",
   ),
   CrewCastModel(
     movieId: "123",
     castId: "123",
-    name: "Lupita Nyong",
-    image: "assets/actors/lupita_nyong.png",
+    name: "Mouni Roy",
+    // image: "assets/actors/lupita_nyong.png",
+    image:
+        "https://assetscdn1.paytm.com/images/cinema/Stills/Cast/Mouni-Roy.jpg",
+  ),
+  CrewCastModel(
+    movieId: "123",
+    castId: "123",
+    name: "ShahRukhKhan",
+    // image: "assets/actors/lupita_nyong.png",
+    image: "https://assetscdn1.paytm.com/images/cinema/Crew/Shah-Rukh-Khan.jpg",
+  ),
+  CrewCastModel(
+    movieId: "123",
+    castId: "123",
+    name: "Nagarjuna\nAkkineni",
+    // image: "assets/actors/lupita_nyong.png",
+    image:
+        "https://assetscdn1.paytm.com/images/cinema/Nagarjuna-Akkineni-350f5044-b5e9-448c-85bd-cb61c090e2d5.jpg",
+  ),
+  CrewCastModel(
+    movieId: "123",
+    castId: "123",
+    name: "Dimple kapadia",
+    // image: "assets/actors/lupita_nyong.png",
+    image:
+        "https://assetscdn1.paytm.com/images/cinema/Dimple-Kapadia-e858141d-c333-4054-9edc-8514967a3968.jpg",
   ),
 ];
 
-   List<TheatreModel> theatres = [
-  TheatreModel(id: "123", name: "Arasan Cinemas A/C 2K Dolby"),
-  TheatreModel(id: "123", name: "INOX - Prozone mall"),
-  TheatreModel(id: "123", name: "Karpagam theatres - 4K Dolby Atoms"),
-  TheatreModel(id: "123", name: "KG theatres - 4K"),
+List<TheatreModel> theatres = [
+  TheatreModel(id: "123", name: "Cinepolis: Imperial Square Mall"),
+  TheatreModel(id: "123", name: "INOX: DR World"),
+  TheatreModel(id: "123", name: "PVR: Rahul Raj"),
+  TheatreModel(id: "123", name: "Time Cinema: Galaxy Circle Pal"),
 ];
 
 // List<String> facilityAsset = [

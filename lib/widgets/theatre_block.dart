@@ -14,7 +14,7 @@ class TheatreBlock extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:[
+        children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -40,7 +40,7 @@ class TheatreBlock extends StatelessWidget {
                 const WidgetSpan(
                   child: Icon(
                     Icons.location_on,
-                    size:18,
+                    size: 18,
                     color: Color(0xff999999),
                   ),
                 ),
@@ -49,7 +49,7 @@ class TheatreBlock extends StatelessWidget {
                   style: TextStyle(color: Color(0xff999999)),
                 ),
                 const TextSpan(
-                  text:  "2.3 km away",
+                  text: "2.5 km away",
                   style: TextStyle(color: Color(0xff444444)),
                 ),
               ],
@@ -61,12 +61,13 @@ class TheatreBlock extends StatelessWidget {
           Wrap(
             runSpacing: 10,
             spacing: 20,
-            children: List.generate(4,
-                  (index) {
-                Color color = index % 2 == 0? MyTheme.orangeColor : MyTheme.greenColor;
+            children: List.generate(
+              4,
+              (index) {
+                Color color =
+                    index % 2 == 0 ? MyTheme.orangeColor : MyTheme.greenColor;
                 return GestureDetector(
-                  onTap: () {
-                  },
+                  onTap: () {},
                   child: Container(
                     decoration: BoxDecoration(
                       color: const Color(0x22E5E5E5),
@@ -76,9 +77,10 @@ class TheatreBlock extends StatelessWidget {
                         color: Color(0xffE5E5E5),
                       ),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 15, vertical: 10),
                     child: Text(
-                      model.timings [index],
+                      model.timings[index],
                       style: TextStyle(color: color),
                     ),
                   ),
@@ -86,11 +88,9 @@ class TheatreBlock extends StatelessWidget {
               },
             ),
           )
-
         ],
       ),
     );
-
   }
 }
 // only change

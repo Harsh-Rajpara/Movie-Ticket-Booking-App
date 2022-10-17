@@ -9,7 +9,7 @@ class CrewCastBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 245,
+      height: 270,
       color: Colors.white,
       padding: EdgeInsets.all(20),
       child: Column(
@@ -46,7 +46,7 @@ class CrewCastBlock extends StatelessWidget {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
+                        child: Image.network(
                           crewCast[index].image,
                           height: 107,
                           width: 87,

@@ -19,7 +19,7 @@ class DetailsScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            "Black Panther - The king",
+            "Brahmastra",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           ),
           Row(
@@ -43,7 +43,7 @@ class DetailsScreen extends StatelessWidget {
   final screensWidget = Row(
     children: [
       Text(
-        "English",
+        "Hindi",
         style: TextStyle(color: MyTheme.splash),
       ),
       SizedBox(
@@ -93,7 +93,7 @@ class DetailsScreen extends StatelessWidget {
       width: 10,
     )),
     TextSpan(
-        text: "2h 59m",
+        text: "2h 47m",
         style: TextStyle(
           color: Colors.black45,
         )),
@@ -113,7 +113,7 @@ class DetailsScreen extends StatelessWidget {
       width: 10,
     )),
     TextSpan(
-        text: "Action, Drama",
+        text: "Action, Adventure, Fantasy",
         style: TextStyle(
           color: Colors.black45,
         )),
@@ -135,7 +135,7 @@ class DetailsScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "UA | oct 15, 2019",
+                    "UA | sep 9, 2022",
                     style: TextStyle(color: Colors.black45),
                   ),
                   Text(
@@ -163,9 +163,10 @@ class DetailsScreen extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         child: ElevatedButton(
           onPressed: () {
-            Get.to( () =>  ListCinemaScreen(
-              model: model,
-            ),
+            Get.to(
+              () => ListCinemaScreen(
+                model: model,
+              ),
             );
           },
           child: Container(
@@ -218,7 +219,7 @@ class DetailsScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage("assets/movie_banner.png"),
+                    image: AssetImage("assets/brahmastra img.jpg"),
                   )),
                 ),
               ),
