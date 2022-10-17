@@ -36,6 +36,10 @@ class TheatreModel {
     ],
   });
 
+
+
+  
+
   TheatreModel copyWith({
     String? id,
     String? name,

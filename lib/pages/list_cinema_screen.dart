@@ -12,8 +12,23 @@ class ListCinemaScreen extends StatelessWidget {
   ListCinemaScreen({Key? key, required this.model}) : super(key: key);
 
   final DateFormat format = DateFormat("dd  MMM");
+  final now = DateTime.now();
+  String selectedDate = DateFormat("dd MMM").format(DateTime.now());
+  String selectedLanguage = "English";
+  String selectedScreen = "3D";
+
   @override
   Widget build(BuildContext context) {
+    final todayDate = format.format(DateTime.now());
+    final tomorrowDate = format.format(DateTime(now.year, now.month, now.day +1));
+    String text ="";
+    if (selectedDate == todayDate){
+      text = "Today,";
+
+    }else if
+    (selectedDate == tomorrowDate) {
+      text= "Tomorrow,";
+    }
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5FA),
       bottomNavigationBar: BottomAppBar(
@@ -26,11 +41,40 @@ class ListCinemaScreen extends StatelessWidget {
             children: [
               Expanded(
                 child: ListTile(
+                  onTap: (){},
+                  horizontalTitleGap: 0,
+                  leading: Icon(
+                    Icons.calendar_month,
+                  color: Colors.white,
+                  ),
+                  textColor: Colors.white,
                   title: Text(
-                    format.format (DateTime.now()),
-                    style: TextStyle(color: Colors.white),
+                    "$text$selectedDate",
+                    style: TextStyle(fontSize: 14),
+                  ),
+                  trailing: const Icon(Icons.keyboard_arrow_down,
+                  color: Colors.white,
                   ),
                 ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: ListTile(
+                  onTap: (){},
+                  horizontalTitleGap: 0,
+                  textColor: Colors.white,
+                  title: Text(
+                    "$selectedLanguage$selectedScreen",
+                  ),
+                  trailing:const Icon(Icons.keyboard_arrow_down,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 10,
               ),
             ],
           ),
