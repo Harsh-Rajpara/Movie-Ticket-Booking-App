@@ -13,8 +13,20 @@ class TheatreBlock extends StatelessWidget {
       color: Colors.white,
       padding: const EdgeInsets.all(20),
       child: Column(
+<<<<<<< HEAD
        crossAxisAlignment: CrossAxisAlignment.start,
              children:[
+=======
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+<<<<<<< HEAD
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [Text(model.name)],
+          )
+        ],
+=======
+>>>>>>> 60c85c0e8821f615d1274922821742963b94c44c
              Row(
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
@@ -84,10 +96,17 @@ class TheatreBlock extends StatelessWidget {
                         ),
                       );
                     },
+<<<<<<< HEAD
                       ),
               )
 
           ],
+=======
+              ),
+          )
+      ],
+>>>>>>> 8b4c841bfb86f7ee756e2b20e8855eade17adcff
+>>>>>>> 60c85c0e8821f615d1274922821742963b94c44c
       ),
       );
 

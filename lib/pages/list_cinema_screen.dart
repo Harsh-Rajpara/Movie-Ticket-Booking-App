@@ -52,13 +52,30 @@ class ListCinemaScreen extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
+<<<<<<< HEAD
         itemCount: theatres.length,
         itemBuilder: (_, index) {
+=======
+<<<<<<< HEAD
+        itemCount: theatres.length,
+        itemBuilder: (_, index) {
+          return Container(
+            padding: const EdgeInsets.only(bottom: 20),
+            // child:
+            // // TheatreBlock(
+            // //   model: theatres[index],
+            // // )
+
+        physics: const BouncingScrollPhysics(),
+        itemCount:theatres.length,
+        itemBuilder: (_,index) {
+>>>>>>> 60c85c0e8821f615d1274922821742963b94c44c
           return Container(
             padding: const EdgeInsets.only(bottom: 20),
             child: TheatreBlock(
               model: theatres[index],
             ),
+>>>>>>> 8b4c841bfb86f7ee756e2b20e8855eade17adcff
           );
         },
       ),
