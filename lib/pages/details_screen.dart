@@ -6,8 +6,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../utils/mytheme.dart';
-import '../utils/mytheme.dart';
-import '../utils/mytheme.dart';
+// import '../utils/mytheme.dart';
+// import '../utils/mytheme.dart';
 
 class DetailsScreen extends StatelessWidget {
   DetailsScreen({Key? key}) : super(key: key);
@@ -163,7 +163,7 @@ class DetailsScreen extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         child: ElevatedButton(
           onPressed: () {
-            Get.to(()=>  ListCinemaScreen(
+            Get.to( () =>  ListCinemaScreen(
               model: model,
             ),
             );
