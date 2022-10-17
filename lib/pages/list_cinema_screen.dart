@@ -61,7 +61,7 @@ class ListCinemaScreen extends StatelessWidget {
             // // TheatreBlock(
             // //   model: theatres[index],
             // // )
-=======
+
         physics: const BouncingScrollPhysics(),
         itemCount:theatres.length,
         itemBuilder: (_,index) {
