@@ -21,7 +21,8 @@ class TheatreModel {
       "Hotel",
       "Park",
     ],
-    this.fullAddress = "City Mall, 2 nd floor Park Road, Civil Lines, Golghar, Gorakhpur, Uttar Pradesh 273001",
+    this.fullAddress =
+        "City Mall, 2 nd floor Park Road, Civil Lines, Golghar, Gorakhpur, Uttar Pradesh 273001",
     this.timings = const [
       "10:00 AM",
       "1:30 PM",
@@ -71,7 +72,8 @@ class TheatreModel {
     return TheatreModel(
       id: map['id'] ?? '',
       name: map['name'] ?? '',
-      coordinates:LatLng.fromJson(map['coordinates']) ?? const LatLng(26.753547, 83.3730171),
+      coordinates: LatLng.fromJson(map['coordinates']) ??
+          const LatLng(26.753547, 83.3730171),
       facilites: List<String>.from(map['facilites']),
       fullAddress: map['fullAddress'] ?? '',
       timings: List<String>.from(map['timings']),
@@ -81,7 +83,8 @@ class TheatreModel {
 
   String toJson() => json.encode(toMap());
 
-  factory TheatreModel.fromJson(String source) => TheatreModel.fromMap(json.decode(source));
+  factory TheatreModel.fromJson(String source) =>
+      TheatreModel.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -105,11 +108,11 @@ class TheatreModel {
   @override
   int get hashCode {
     return id.hashCode ^
-    name.hashCode ^
-    coordinates.hashCode ^
-    facilites.hashCode ^
-    fullAddress.hashCode ^
-    timings.hashCode ^
-    avalableScreens.hashCode;
+        name.hashCode ^
+        coordinates.hashCode ^
+        facilites.hashCode ^
+        fullAddress.hashCode ^
+        timings.hashCode ^
+        avalableScreens.hashCode;
   }
 }

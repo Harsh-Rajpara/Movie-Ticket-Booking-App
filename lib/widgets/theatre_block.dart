@@ -1,12 +1,11 @@
-import 'package:booknowshow/controllers/location_controller.dart';
+// import 'package:booknowshow/controllers/location_controller.dart';
 import 'package:booknowshow/utils/mytheme.dart';
 import 'package:flutter/material.dart';
 import 'package:booknowshow/model/theatre_model.dart';
 
 class TheatreBlock extends StatelessWidget {
-  final TheatreBlock model;
+  final TheatreModel model;
   const TheatreBlock({Key? key, required this.model}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +13,8 @@ class TheatreBlock extends StatelessWidget {
       color: Colors.white,
       padding: const EdgeInsets.all(20),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+       crossAxisAlignment: CrossAxisAlignment.start,
+             children:[
              Row(
                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                children: [
@@ -46,7 +45,7 @@ class TheatreBlock extends StatelessWidget {
                   ),
                   ),
                   TextSpan(
-                    text: LocationController.instance.city.value + ",",
+                    // text: LocationController.instance.city.value + ",",
                     style: TextStyle(color: Color(0xff999999)),
                   ),
                   const TextSpan(
@@ -85,11 +84,13 @@ class TheatreBlock extends StatelessWidget {
                         ),
                       );
                     },
-              ),
-          )
-      ],
+                      ),
+              )
+
+          ],
       ),
-    );
+      );
+
   }
 }
 // only change

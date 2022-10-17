@@ -40,25 +40,22 @@ class ListCinemaScreen extends StatelessWidget {
         elevation: 0,
         title: Text(model.title),
         actions: [
-          IconButton
-            (onPressed:() {
-            //   showSerch(
-            //     context:context,
-            //     deLegate: MySearchDelegate(list: List, isMovie: menu.name.toLowerCase().contains("movies")
-            // );
-
-          },
-          icon:SvgPicture.asset("assets/icons/search.svg"),
+          IconButton(
+            onPressed: () {
+              //   showSerch(
+              //     context:context,
+              //     deLegate: MySearchDelegate(list: List, isMovie: menu.name.toLowerCase().contains("movies")
+              // );
+            },
+            icon: SvgPicture.asset("assets/icons/search.svg"),
           ),
         ],
-
       ),
       body: ListView.builder(
-        physics: const BouncingScrollPhysics(),
-        itemCount:theatres.length,
-        itemBuilder: (_,index) {
+        itemCount: theatres.length,
+        itemBuilder: (_, index) {
           return Container(
-            padding:  EdgeInsets.only(bottom: index != theatres.length -1 ? 20 : 0),
+            padding: const EdgeInsets.only(bottom: 20),
             child: TheatreBlock(
               model: theatres[index],
             ),
@@ -66,6 +63,6 @@ class ListCinemaScreen extends StatelessWidget {
         },
       ),
     );
+
   }
 }
-
